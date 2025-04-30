@@ -1,0 +1,223 @@
+
+
+.background {
+   
+    height: 700px;
+    width: 600px;
+    background-color: #E63946	;
+    border-bottom-left-radius: 300px; /* Rounds the bottom-left corner */
+  border-bottom-right-radius: 300px; /* Rounds the bottom-right corner */
+ margin-right: 100px;
+
+   
+   
+}
+.man{
+  clip-path: inset(5% 0 0 0); /* Hides the top half */
+  backdrop-filter: blur(5px);
+  top: 80px;
+  margin-top: 300px;
+  width: 2000px;
+  border-bottom-left-radius: 300px; /* Rounds the bottom-left corner */
+  border-bottom-right-radius: 300px; /* Rounds the bottom-right corner */
+}
+
+
+.Home, .Workouts, .about-us, .contact, .Progress{
+
+    font-family: 'kanit', serif;
+    font-weight: 700;
+    font-size: 18px;
+    font-style: italic;
+    color: white;
+    transition: ease-in 0.2s;
+
+}
+
+.Home:hover, .about-us:hover, .contact:hover, .Yoga:hover, .Progress:hover{
+cursor: pointer;
+color: black;
+
+}
+
+
+
+.hvr-underline-reveal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-reveal:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    height: 4px;
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-reveal:hover:before, .hvr-underline-reveal:focus:before, .hvr-underline-reveal:active:before {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  
+
+
+  @keyframes icon-hang {
+    0% {
+      transform: translateY(6px);
+    }
+    50% {
+      transform: translateY(2px);
+    }
+    100% {
+      transform: translateY(6px);
+    }
+  }
+  
+  @keyframes icon-hang-sink {
+    100% {
+      transform: translateY(6px);
+    }
+  }
+  
+  .icon-hang {
+    transition-duration: 0.3s;
+    font-family: 'kanit', serif;
+    border: solid rgba(120, 17, 17, 0.878) 2px;
+    font-size: 18px;
+    font-style: italic;
+    transition: ease-in 0.1s;
+  }
+  .icon-hang:hover{
+    background-color: #F4A261	;
+    border: none;
+    color:  black;
+  }
+  
+  .icon-hang .hvr-icon {
+    transform: translateZ(0);
+  }
+
+  
+  .icon-hang:hover .hvr-icon,
+  .icon-hang:focus .hvr-icon,
+  .icon-hang:active .hvr-icon {
+    animation-name: icon-hang-sink, icon-hang;
+    animation-duration: 0.3s, 1.5s;
+    animation-delay: 0s, 0.3s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal, alternate;
+  }
+  
+  .menu {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 200px;
+  }
+  
+  .menu > li > a {
+    background: blue;
+    color: #fff;
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .menu ul {
+    background: #ddd;
+    height: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: all .5s ease;
+    top: 35px;
+    width: 100%;
+  }
+  
+  .menu li:hover ul {
+    height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .menu ul a {
+    color: #000;
+    display: block;
+    padding: 5px 20px;
+  }
+
+
+.greetings{
+    font-family: 'kanit', serif;
+    font-size: 700;
+    font-style: italic;
+    
+}
+
+.title-2{
+    font-family: 'kanit', serif;
+    font-weight: 700;
+    font-style: italic;
+  
+    
+}
+.inner-title{
+    font-family: 'kanit', serif;
+    font-size: 40px;
+    font-weight: 700;
+    font-style: italic;
+   text-align: start;
+}
+
+
+.weights2 {
+  transform: rotate(20deg);
+  animation: float-clockwise 6s ease-in-out infinite;
+}
+
+.weights {
+  transform: rotate(-20deg);
+  animation: float-counterclockwise 6s ease-in-out infinite;
+}
+
+@keyframes float-clockwise {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-40px) rotate(20deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes float-counterclockwise {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(-20deg); /* Rotate in the opposite direction */
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}

@@ -1,0 +1,48 @@
+
+.b{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 160px;
+    margin-top: 100px;
+}
+
+.paragraph{
+    text-align: start;
+}
+
+.section-title{
+    font-family: 'kanit', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 50px;
+
+}
+.offer{
+    color: #E63946;
+}
+
+.section-bg{
+    background-image: url(../../Assists/Home/bg-2.png);
+  
+}
+
+.bg-overlay-black{
+    position: relative;
+}
+
+.bg-img{
+
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+    padding-top: 130px 0;
+
+}
+
+.card{
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}

@@ -135,7 +135,7 @@ console.log('offerssssssssss',offers);
               <SwiperSlide key={card.id} className="p-4">
                 <div className="w-[360px] h-[480px] p-6 rounded-xl shadow-md dark:bg-gray-50 dark:text-gray-900 card">
                   <div className="text-[200px] text-red-700 flex justify-center mt-5">
-                    <img className="w-[180px]" src={card.Image} />
+                    <img className="w-[180px]"    src={`http://localhost:5000/public/${card.image.replace("public/", "")}`} />
                   </div>
 
                   <div className="mt-6 mb-2">

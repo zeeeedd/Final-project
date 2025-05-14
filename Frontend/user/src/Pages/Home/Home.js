@@ -10,13 +10,17 @@ import Contact from "../Contact/Contact";
 
 
 
+
 function Home(){
     const sectionRef = useRef(null);
     return(
         <>
-        {/* <Section0 sectionRef={sectionRef}/> */}
+
+        <Section0 sectionRef={sectionRef}/>
         <Section1 sectionRef={sectionRef} />
-        <Contact/>
+        
+        
+
  
         
 

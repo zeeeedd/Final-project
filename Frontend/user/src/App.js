@@ -21,11 +21,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Routes>
+      <Route path="/Auth" element={<Auth/>}/>
       <Route path="/" element={<Layout />} >
         <Route path="/" element={<Home />} />
         <Route path="Contact" element={<Contact/>} /> 
         <Route path="Details/:id" element={<Details/>} />
-        <Route path="/Auth" element={<Auth/>}/>
+       
     
         </Route>
       </Routes>

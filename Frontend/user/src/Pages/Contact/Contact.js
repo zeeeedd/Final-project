@@ -6,6 +6,7 @@ import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import CustomerServiceImage from "../../Assists/Home/customer_service.png";
 
+
 function Contact({ContactSection}) {
   return (
     <>
@@ -16,7 +17,7 @@ function Contact({ContactSection}) {
           <h1 className="text-white  pb-3 text-4xl mt-14 font">
             We'd love to hear from you.
           </h1>
-          <div className="w-[1160px] h-[1600px] top-[2150px] rounded-3xl bg-white shadow-2xl absolute flex">
+          <div className="w-[1160px] h-[1600px] top-[400px] rounded-3xl bg-white shadow-2xl absolute flex">
             <div className=" w-[420px] h-[510px] mt-2 ml-2  pt-1">
               <h1 className="mt-5 text-start  ml-12 text-5xl font text-[#e63946]">
                 Let's Talk

@@ -16,6 +16,7 @@ import YogaIcon from "../../Assists/Home/yoga.svg";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+
 function Section1({ sectionRef }) {
 
 
@@ -40,7 +41,7 @@ console.log('offerssssssssss',offers);
       id:1,
       title: "Workouts",
       description:
-        "Achieve DumbbellIconyour fitness goals with tailored workout plans designed to improve strength, endurance, and overall well-being.",
+        "Achieve your fitness goals with tailored workout plans designed to improve strength, endurance, and overall well-being.",
       image: DumbbellIcon,
     },
     {
@@ -134,7 +135,7 @@ console.log('offerssssssssss',offers);
               <SwiperSlide key={card.id} className="p-4">
                 <div className="w-[360px] h-[480px] p-6 rounded-xl shadow-md dark:bg-gray-50 dark:text-gray-900 card">
                   <div className="text-[200px] text-red-700 flex justify-center mt-5">
-                    <img className="w-[180px]" src={DumbbellIcon} />
+                    <img className="w-[180px]" src={card.Image} />
                   </div>
 
                   <div className="mt-6 mb-2">
@@ -164,6 +165,8 @@ console.log('offerssssssssss',offers);
       <svg xmlns="http://www.w3.org/2000/svg"  className="z-auto  absolute " viewBox="0 0 1440 320">
   <path fill="#000000" fill-opacity="1" d="M0,96L24,96C48,96,96,96,144,101.3C192,107,240,117,288,138.7C336,160,384,192,432,208C480,224,528,224,576,197.3C624,171,672,117,720,106.7C768,96,816,128,864,117.3C912,107,960,53,1008,53.3C1056,53,1104,107,1152,133.3C1200,160,1248,160,1296,160C1344,160,1392,160,1416,160L1440,160L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path>
 </svg>
+
+{/* <img src={} /> */}
     </>
   );
 }

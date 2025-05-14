@@ -8,6 +8,10 @@ const offersSchema = mongoose.Schema({
     description: {
         type: String,
         required: [true, 'Please add a description']
+    },
+    image: {
+        type: String,
+        default: ""
     }
 
 

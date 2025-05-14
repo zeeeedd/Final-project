@@ -1,5 +1,5 @@
 
-
+const path = require('path')
 const asyncHandler = require('express-async-handler')
 const Offer = require('../models/offersModels')
 
@@ -22,18 +22,33 @@ const getOffers = asyncHandler(async (req, res) => {
 const setOffer = asyncHandler(async (req, res) => {
     
      console.log('reqq',req?.body?.title);
-     
 
-    if(!req?.body?.title && req?.body?.description ){
+     if(req.body.title && req.body.description && req.files.length > 0) {
+        const img = [];
+        req.files.forEach((filePath) => {
+          const pathOne = filePath.path.split(path.sep);
+          const imgPath = "/" + pathOne[1] + "/" + pathOne[2];
+          img.push(imgPath);
+        });
+        const offer = await Offer.create({
+            title: req?.body?.title,
+            description: req?.body?.description,
+            image: img[0]
+        })
+        res.status(200).json(offer)
+    }
+    else{
         res.status(400)
         throw new Error('Please add a title and description field')
     }
 
-    const offer = await Offer.create({
-        title: req?.body?.title,
-        description: req?.body?.description,
-    })
-    res.status(200).json(offer)
+    //  const image = req.file?.filename || '';
+    //  console.log(req) 
+     
+
+    
+
+    
 
 })
 
@@ -50,6 +65,11 @@ const updateOffer = asyncHandler(async (req, res) => {
         throw new Error('Offer not found')
 
     }
+
+   if (req.file) {
+      offer.image = req.file.filename;
+    }
+
     const updatedOffer = await Offer.findByIdAndUpdate(req.params.id, req.body, {
              new: true,
          })
@@ -73,21 +93,27 @@ const deleteOffer = asyncHandler(async(req, res) =>{
             throw new Error('Offer not found')
     
         }
-
-        await offer.remove
+         await offer.deleteOne();
 
         res.status(200).json({ id: req.params.id})
 
-})
+});
+
+
+
+
+// @desc   GET offer by ID
+// @route   GET /api/offers:/id
+// @access  Private
 
 const getByIdDetailsOffers = asyncHandler(async(req, res) =>{
    
     
-    const detaolsOffer = await Offer.findById(req.params.id)
+    const detailsOffer = await Offer.findById(req.params.id)
     
-    res.status(200).json(detaolsOffer)
+    res.status(200).json(detailsOffer)
 
-console.log('detaolsOffer',detaolsOffer);
+console.log('detaolsOffer',detailsOffer);
 
 
 
